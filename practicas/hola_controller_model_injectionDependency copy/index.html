@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="MyApp"> <!-- Muy importante tener el ng-app para que el navegador reconozca que el proyecto lleva AngularJS,
+además, se debe hacer colocar el nombre del módulo al que está haciendo referencia en el controller -->
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-controller="FirstController"><!-- Debemos hacer referencia al controlador sobre el cual el body o algun tag de html va a trabajar -->
+    
+    <input type="text" ng-model="nuevoComentario.comentario"><br> <!-- Une la vista con el modelo y viceversa con directivas como textarea, inputs, formularios, etc  -->
+    <input type="text" ng-model="nuevoComentario.username"><br> <!-- Two way data binding: Sincronización entre el modelo y la vista  -->
+    <input type="text" ng-model="nuevoComentario.usernametest"><br> <!-- Tiene la capacidad de crear atributos al objeto  -->
+
+    <button ng-click="agregarComentario()">Agregar</button>
+
+    {{"Hola " + nombre}}
+
+    <h3>Comentarios</h3>
+
+    <ul>
+        <li ng-repeat="comentario in comentarios">
+            {{comentario.comentario}} - <strong>{{comentario.username}} - {{comentario.usernametest}}</strong>
+        </li>
+    </ul>
+
+</body>
+</html>

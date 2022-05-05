@@ -1,0 +1,15 @@
+AngularJS -> Framework MWV (Model View Wathever)
+Framework: Es una especie de ayuda para facilitar el uso de un lenguaje, es universal, reusable. 
+
+MVW vs MVC 
+
+Cuando usar AngularJS
+- Cuando las vistas se construyen a partir de ciertos datos
+- Tus vistas modifican los datos de tu aplicación 
+- Tu app consume datos de una REST API
+
+**Conceptos Principales de AngularJS
+Directives -> HTML con súper poderes
+Controllers -> Contiene la lógica de la app vía $scope(Es el puente entre la vista y el modelo)
+Factories y Services -> Organiza y comparte código en tu app 
+Filters -> Dan formato a los datos cuando son presentados

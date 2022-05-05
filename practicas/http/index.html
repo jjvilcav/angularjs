@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="MyApp"> <!-- Muy importante tener el ng-app para que el navegador reconozca que el proyecto lleva AngularJS,
+además, se debe hacer colocar el nombre del módulo al que está haciendo referencia en el controller -->
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Request</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-controller="FirstController"><!-- Debemos hacer referencia al controlador sobre el cual el body o algun tag de html va a trabajar -->
+    <input type="text" ng-model="newPost.title"><br>
+    <input type="text" ng-model="newPost.body"><br>
+    <button ng-click="addPost()">Send</button>
+    <ul>
+        <li ng-repeat="post in posts" >
+            <h3>{{post.title}}</h3>
+            <p>{{post.body}}</p>
+        </li>
+
+    </ul>
+
+
+</body>
+</html>
